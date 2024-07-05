@@ -1,6 +1,6 @@
 {
   "name": "@kabrut/vue-quill-editor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "fork of @voicehub/vue-quill-editor",
   "main": "index.js",
   "scripts": {
@@ -124,6 +124,17 @@
     "vue web editor",
     "vue editor"
   ],
+  "scripts": {
+    "build": "npm run build:spa && npm run build:ssr",
+    "build:spa": "cross-env NODE_ENV=production webpack --config config/build.conf.js",
+    "build:ssr": "babel src/ssr.js --out-file dist/ssr.js",
+    "finish": "npm run lint && npm test && npm run build",
+    "lint": "eslint --ext .js,.vue src test/unit/specs",
+    "publish": "git push && git push --tags && npm publish",
+    "test": "cross-env BABEL_ENV=test NODE_ENV=testing karma start test/unit/karma.conf.js --single-run",
+    "unit": "cross-env BABEL_ENV=test NODE_ENV=testing karma start test/unit/karma.conf.js --watch"
+  },
+  "unpkg": "dist/vue-quill-editor.js",
   "author": "",
   "license": "MIT",
   "bugs": {
