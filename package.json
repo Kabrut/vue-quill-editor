@@ -1,10 +1,17 @@
 {
   "name": "@kabrut/vue-quill-editor",
-  "version": "1.0.3",
-  "description": "fork of @voicehub/vue-quill-editor",
-  "main": "index.js",
+  "version": "1.0.4",
+  "description": "Quill editor component for Vue",
+ "main": "dist/vue-quill-editor.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:spa && npm run build:ssr",
+    "build:spa": "cross-env NODE_ENV=production webpack --config config/build.conf.js",
+    "build:ssr": "babel src/ssr.js --out-file dist/ssr.js",
+    "finish": "npm run lint && npm test && npm run build",
+    "lint": "eslint --ext .js,.vue src test/unit/specs",
+    "publish": "git push && git push --tags && npm publish",
+    "test": "cross-env BABEL_ENV=test NODE_ENV=testing karma start test/unit/karma.conf.js --single-run",
+    "unit": "cross-env BABEL_ENV=test NODE_ENV=testing karma start test/unit/karma.conf.js --watch"
   },
   "repository": {
     "type": "git",
@@ -14,7 +21,6 @@
     "object-assign": "^4.1.1",
     "quill": ">=2.0.0-dev.3"
   },
-  "description": "Quill editor component for Vue",
   "devDependencies": {
     "autoprefixer": "^6.7.2",
     "babel-cli": "^6.23.0",
@@ -109,7 +115,7 @@
     "dist",
     "src"
   ],
-  "homepage": "https://github.com/voicehub-io/vue-quill-editor#readme",
+  "homepage": "https://github.com/Kabrut/vue-quill-editor#readme",
   "jsnext:main": "dist/vue-quill-editor.js",
   "jspm": {
     "main": "dist/vue-quill-editor.js",
@@ -124,21 +130,10 @@
     "vue web editor",
     "vue editor"
   ],
-  "scripts": {
-    "build": "npm run build:spa && npm run build:ssr",
-    "build:spa": "cross-env NODE_ENV=production webpack --config config/build.conf.js",
-    "build:ssr": "babel src/ssr.js --out-file dist/ssr.js",
-    "finish": "npm run lint && npm test && npm run build",
-    "lint": "eslint --ext .js,.vue src test/unit/specs",
-    "publish": "git push && git push --tags && npm publish",
-    "test": "cross-env BABEL_ENV=test NODE_ENV=testing karma start test/unit/karma.conf.js --single-run",
-    "unit": "cross-env BABEL_ENV=test NODE_ENV=testing karma start test/unit/karma.conf.js --watch"
-  },
   "unpkg": "dist/vue-quill-editor.js",
   "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Kabrut/vue-quill-editor/issues"
-  },
-  "homepage": "https://github.com/Kabrut/vue-quill-editor#readme"
+  }
 }
