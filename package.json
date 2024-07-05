@@ -1,4 +1,5 @@
 {
+ "_location": "/@kabrut/vue-quill-editor",
   "name": "@kabrut/vue-quill-editor",
   "version": "1.0.5",
   "description": "Quill editor component for Vue",
@@ -13,6 +14,9 @@
     "test": "cross-env BABEL_ENV=test NODE_ENV=testing karma start test/unit/karma.conf.js --single-run",
     "unit": "cross-env BABEL_ENV=test NODE_ENV=testing karma start test/unit/karma.conf.js --watch"
   },
+  "_requiredBy": [
+    "/"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kabrut/vue-quill-editor.git"
@@ -109,7 +113,7 @@
     "highlight.js": "^9.12.0",
     "quill-image-drop-module": "^1.0.3",
     "quill-image-resize-module": "^3.0.0",
-    "@voicehub/vue-quill-editor": "^3.0.0"
+    "@kabrut/vue-quill-editor": "^3.0.0"
   },
   "files": [
     "dist",
@@ -131,6 +135,7 @@
     "vue editor"
   ],
   "unpkg": "dist/vue-quill-editor.js",
+  "private": false,
   "author": "",
   "license": "MIT",
   "bugs": {
