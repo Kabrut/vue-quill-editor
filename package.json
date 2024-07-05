@@ -1,40 +1,14 @@
 {
-  "_args": [
-    [
-      "@voicehub/vue-quill-editor@4.0.1",
-      "C:\\Users\\INWAVE-2\\PhpstormProjects\\rulewave-new"
-    ]
-  ],
-  "_from": "@voicehub/vue-quill-editor@4.0.1",
-  "_id": "@voicehub/vue-quill-editor@4.0.1",
-  "_inBundle": false,
-  "_integrity": "sha512-YVJoFiJTVVfeGLpmsb134AES5OrzGFgBEqVzqvmiHo+fJFRxbw9SRtOtwmQtF/mSueG+MncDfxAcrBOYbt3b8Q==",
-  "_location": "/@voicehub/vue-quill-editor",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "@voicehub/vue-quill-editor@4.0.1",
-    "name": "@voicehub/vue-quill-editor",
-    "escapedName": "@voicehub%2fvue-quill-editor",
-    "scope": "@voicehub",
-    "rawSpec": "4.0.1",
-    "saveSpec": null,
-    "fetchSpec": "4.0.1"
+  "name": "@kabrut/vue-quill-editor",
+  "version": "1.0.1",
+  "description": "fork of @voicehub/vue-quill-editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/@voicehub/vue-quill-editor/-/vue-quill-editor-4.0.1.tgz",
-  "_spec": "4.0.1",
-  "_where": "C:\\Users\\INWAVE-2\\PhpstormProjects\\rulewave-new",
-  "author": {
-    "name": "Voicehub GmbH",
-    "email": "info@voicehub.io",
-    "url": "https://voicehub.io"
-  },
-  "bugs": {
-    "url": "https://github.com/voicehub-io/vue-quill-editor/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kabrut/vue-quill-editor.git"
   },
   "dependencies": {
     "object-assign": "^4.1.1",
@@ -150,24 +124,10 @@
     "vue web editor",
     "vue editor"
   ],
+  "author": "",
   "license": "MIT",
-  "main": "dist/vue-quill-editor.js",
-  "name": "@voicehub/vue-quill-editor",
-  "private": false,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/voicehub-io/vue-quill-editor.git"
+  "bugs": {
+    "url": "https://github.com/Kabrut/vue-quill-editor/issues"
   },
-  "scripts": {
-    "build": "npm run build:spa && npm run build:ssr",
-    "build:spa": "cross-env NODE_ENV=production webpack --config config/build.conf.js",
-    "build:ssr": "babel src/ssr.js --out-file dist/ssr.js",
-    "finish": "npm run lint && npm test && npm run build",
-    "lint": "eslint --ext .js,.vue src test/unit/specs",
-    "publish": "git push && git push --tags && npm publish",
-    "test": "cross-env BABEL_ENV=test NODE_ENV=testing karma start test/unit/karma.conf.js --single-run",
-    "unit": "cross-env BABEL_ENV=test NODE_ENV=testing karma start test/unit/karma.conf.js --watch"
-  },
-  "unpkg": "dist/vue-quill-editor.js",
-  "version": "4.0.1"
+  "homepage": "https://github.com/Kabrut/vue-quill-editor#readme"
 }
