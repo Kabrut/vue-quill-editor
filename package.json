@@ -1,7 +1,7 @@
 {
  "_location": "/@kabrut/vue-quill-editor",
   "name": "@kabrut/vue-quill-editor",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Quill editor component for Vue",
  "main": "dist/vue-quill-editor.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "object-assign": "^4.1.1",
-    "quill": ">=2.0.0-dev.3"
+    "quill": ">=2.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
