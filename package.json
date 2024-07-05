@@ -1,6 +1,6 @@
 {
   "name": "@kabrut/vue-quill-editor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "fork of @voicehub/vue-quill-editor",
   "main": "index.js",
   "scripts": {
